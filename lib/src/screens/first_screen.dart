@@ -113,7 +113,7 @@ class _LoginForm extends StatelessWidget {
 
             SizedBox( height: 30 ),
 
-            Button(loginForm: loginForm),
+            _Button(loginForm: loginForm),
 
             SizedBox( height: 40 ),
 
@@ -138,8 +138,8 @@ class _LoginForm extends StatelessWidget {
   }
 }
 
-class Button extends StatelessWidget {
-  const Button({
+class _Button extends StatelessWidget {
+  const _Button({
     Key? key,
     required this.loginForm,
   }) : super(key: key);
