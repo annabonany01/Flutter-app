@@ -71,25 +71,26 @@ class BackImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      backgroundColor: Colors.green,
+      backgroundColor: Colors.black,
+      automaticallyImplyLeading: true,
       expandedHeight: 200,
       floating: false,
       pinned: true,
       flexibleSpace: FlexibleSpaceBar(
-        centerTitle: true,
         titlePadding: EdgeInsets.all(0),
         title: Container(
           width: double.infinity,
-          alignment: Alignment.bottomCenter,
-          padding: EdgeInsets.only( bottom: 10, left: 10, right: 10),
-          color: Colors.black12,
-          
+          color: Colors.black26,
         ),
         background: FadeInImage(
           placeholder: AssetImage('assets/jar-loading.gif'), 
           image: NetworkImage('http://www.pecadosdereposteria.com/wp-content/uploads/2014/08/crema-queso-rambuesas-crocanti-istachos-pecados-reposteria-3.jpg'),
           fit: BoxFit.cover,
         ),
+      ),
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back_rounded, color: Colors.white ),
+        onPressed: () => Navigator.pushReplacementNamed(context, 'five'),
       ),
       
     );

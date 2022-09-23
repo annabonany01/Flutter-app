@@ -28,7 +28,7 @@ class FourScreen extends StatelessWidget {
             titulo: 'Equipos para Cocinar', 
             descripcion: 'Para cocinar al Vacío Sous-Vide a Baja Temperatura y Robots diseñados para hacer fácil y práctica la buena cocina',
             image: 'assets/home2.jpg',
-            page: 'six'
+            page: 'seven'
             ),
 
           ],

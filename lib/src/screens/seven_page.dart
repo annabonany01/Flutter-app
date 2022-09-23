@@ -2,152 +2,109 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class FiveScreen extends StatelessWidget {
+class SevenScreen extends StatelessWidget {
  
   final List<Tab> _tabs = [
     Tab(
       icon: SvgPicture.asset(
-        'assets/spaghetti.svg',
+        'assets/cook.svg',
         width: 30,
         height: 30,
         color: Colors.grey,
       ),
-      text: 'Pasta',
+      text: 'Ollas',
     ),
     Tab(
       icon: SvgPicture.asset(
-        'assets/steak.svg',
+        'assets/pan.svg',
         width: 30,
         height: 30,
         color: Colors.grey,
       ),
-      text: 'Carne',
+      text: 'Sartenes',
     ),
     Tab(
       icon: SvgPicture.asset(
-        'assets/fish.svg',
+        'assets/thermo.svg',
         width: 30,
         height: 30,
         color: Colors.grey,
       ),
-      text: 'Pescado',
+      text: 'Termos',
     ),
     Tab(
       icon: SvgPicture.asset(
-        'assets/carrot.svg',
+        'assets/rice-cooker.svg',
         width: 30,
         height: 30,
         color: Colors.grey,
       ),
-      text: 'Verduras',
-    ),
-    Tab(
-      icon: SvgPicture.asset(
-        'assets/apple (1).svg',
-        width: 30,
-        height: 30,
-        color: Colors.grey,
-      ),
-      text: 'Frutas',
+      text: 'Arroceras',
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Stack(
-        alignment: Alignment.bottomRight,
-        children: [
-          DefaultTabController(
-            length: _tabs.length,
-            child: Scaffold(
-              appBar: AppBar(
-                title: Text('Delivery'),
-                foregroundColor: Colors.black,
-                backgroundColor: Colors.white,
-                actions: [
-                  IconButton(
-                    icon: Icon(Icons.search_rounded, color: Colors.green),
-                    onPressed: () => Navigator.pushReplacementNamed(context, 'ten'),
-                  ),
-                  IconButton(
-                      icon: Icon(Icons.history_rounded, color: Colors.green),
-                      onPressed: () =>
-                          Navigator.pushReplacementNamed(context, 'twelve')),
-                ],
-                leading: Builder(
-                  builder: (BuildContext context) {
-                    return IconButton(
-                      icon: const Icon(Icons.arrow_back, color: Colors.green),
-                      onPressed: () =>
-                          Navigator.pushReplacementNamed(context, 'four'),
-                    );
-                  },
-                ),
+      child: DefaultTabController(
+        length: _tabs.length,
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text('Productos'),
+            foregroundColor: Colors.black,
+            backgroundColor: Colors.white,
+            actions: [
+              IconButton(
+                icon: Icon(Icons.search_rounded, color: Colors.green),
+                onPressed: () => Navigator.pushReplacementNamed(context, 'ten'),
               ),
-              body: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5),
-                    child: TabBar(
-                      tabs: _tabs,
-                      isScrollable: true,
-                      physics: BouncingScrollPhysics(),
-                      unselectedLabelColor: Colors.black38,
-                      labelColor: Colors.black54,
-                      indicatorColor: Color.fromARGB(0, 0, 0, 0),
-                    ),
-                  ),
-                  const Expanded(
-                    child: TabBarView(
-                      physics: BouncingScrollPhysics(),
-                      dragStartBehavior: DragStartBehavior.down,
-                      children: [
-                        //TODO: añadir los productos separados por sectores
-                        _CardTable(),
-                        _CardTable(),
-                        _CardTable(),
-                        _CardTable(),
-                        _CardTable(),
-
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              IconButton(
+                  icon: Icon(Icons.history_rounded, color: Colors.green),
+                  onPressed: () =>
+                      Navigator.pushReplacementNamed(context, 'twelve')),
+            ],
+            leading: Builder(
+              builder: (BuildContext context) {
+                return IconButton(
+                  icon: const Icon(Icons.arrow_back, color: Colors.green),
+                  onPressed: () =>
+                      Navigator.pushReplacementNamed(context, 'four'),
+                );
+              },
             ),
           ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.lime[600],
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(20))
-
-            ),
-            child: FittedBox(
-              fit: BoxFit.contain,
-              child: Row(
-                children: [
-                
-                  MaterialButton(
-                    minWidth: 10,
-                    child: Icon(Icons.person, color: Colors.white,),
-                    //TODO: portar a pag 16
-                    onPressed: () {}, 
-                  ),
-                  MaterialButton(
-                    minWidth: 10,
-                    child: Icon(Icons.add_shopping_cart_rounded, color: Colors.white,),
-                    //TODO: portar a pag 13
-
-                    onPressed: () {}, 
-                  ),
-                ],
+          body: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 5),
+                child: TabBar(
+                  tabs: _tabs,
+                  isScrollable: true,
+                  physics: BouncingScrollPhysics(),
+                  unselectedLabelColor: Colors.black38,
+                  labelColor: Colors.black54,
+                  indicatorColor: Color.fromARGB(0, 0, 0, 0),
+                ),
               ),
-            ),
-          )
-        ],
-        
+              const Expanded(
+                child: TabBarView(
+                  physics: BouncingScrollPhysics(),
+                  dragStartBehavior: DragStartBehavior.down,
+                  children: [
+                    //TODO: añadir los productos separados por sectores
+                    _CardTable(),
+                    _CardTable(),
+                    _CardTable(),
+                    _CardTable(),
+                    _CardTable(),
+
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
