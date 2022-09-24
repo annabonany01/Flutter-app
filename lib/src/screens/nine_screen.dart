@@ -1,19 +1,10 @@
-//import 'package:abalit/src/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 
-class SixScreen extends StatelessWidget {
-
-  final List<Image> images = [
-    Image.network('http://www.pecadosdereposteria.com/wp-content/uploads/2014/08/crema-queso-rambuesas-crocanti-istachos-pecados-reposteria-3.jpg'),
-    Image.network('https://img2.rtve.es/imagenes/torres-cocina-tarta-frambuesas-pistachos/1551022521850.png'),
-    Image.network('http://www.frostingbarcelona.com/wp-content/uploads/2015/03/verde_pistacho_dulces_frostingbarcelona_013_minitarta_pistachos.jpg'),
-  ];
-
+class NineScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -21,7 +12,7 @@ class SixScreen extends StatelessWidget {
         slivers: [
           //TODO: hacer card swiper
           //CardSwiper(images: images,),
-          BackImage(),
+          _BackImage(),
           SliverList(
             delegate: SliverChildListDelegate([
               Padding(
@@ -29,11 +20,11 @@ class SixScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    Text('Pastel de pistacho y frambuesa', style: TextStyle(color: Colors.black, fontSize: 22, fontWeight: FontWeight.w700)),
+                    Text('Olla tapa terracota', style: TextStyle(color: Colors.black, fontSize: 22, fontWeight: FontWeight.w700)),
                     
                     SizedBox(height: 15),
                     
-                    Text('16€', style: TextStyle(color: Colors.green, fontSize: 20, fontWeight: FontWeight.w500)),
+                    Text('49€', style: TextStyle(color: Colors.green, fontSize: 20, fontWeight: FontWeight.w500)),
                     
                     SizedBox(height: 15),
                     
@@ -61,8 +52,8 @@ class SixScreen extends StatelessWidget {
   }
 }
 
-class BackImage extends StatelessWidget {
-  const BackImage({
+class _BackImage extends StatelessWidget {
+  const _BackImage({
     Key? key,
   }) : super(key: key);
 
@@ -82,13 +73,13 @@ class BackImage extends StatelessWidget {
         ),
         background: FadeInImage(
           placeholder: AssetImage('assets/jar-loading.gif'), 
-          image: NetworkImage('http://www.pecadosdereposteria.com/wp-content/uploads/2014/08/crema-queso-rambuesas-crocanti-istachos-pecados-reposteria-3.jpg'),
+          image: NetworkImage('http://img.pccomponentes.com/articles/42/423966/1805-vidaxl-olla-con-tapa-5l-265x115cm-negra-a7d1fddf-627b-4505-9116-0b20fea6fc15.jpg'),
           fit: BoxFit.cover,
         ),
       ),
       leading: IconButton(
         icon: Icon(Icons.arrow_back_rounded, color: Colors.white ),
-        onPressed: () => Navigator.pushReplacementNamed(context, 'five'),
+        onPressed: () => Navigator.pushReplacementNamed(context, 'eight'),
       ),
       
     );

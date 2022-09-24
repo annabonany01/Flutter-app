@@ -1,153 +1,42 @@
-import 'package:abalit/src/search/search_delegate.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-class FiveScreen extends StatelessWidget {
- 
-  final List<Tab> _tabs = [
-    Tab(
-      icon: SvgPicture.asset(
-        'assets/spaghetti.svg',
-        width: 30,
-        height: 30,
-        color: Colors.grey,
-      ),
-      text: 'Pasta',
-    ),
-    Tab(
-      icon: SvgPicture.asset(
-        'assets/steak.svg',
-        width: 30,
-        height: 30,
-        color: Colors.grey,
-      ),
-      text: 'Carne',
-    ),
-    Tab(
-      icon: SvgPicture.asset(
-        'assets/fish.svg',
-        width: 30,
-        height: 30,
-        color: Colors.grey,
-      ),
-      text: 'Pescado',
-    ),
-    Tab(
-      icon: SvgPicture.asset(
-        'assets/carrot.svg',
-        width: 30,
-        height: 30,
-        color: Colors.grey,
-      ),
-      text: 'Verduras',
-    ),
-    Tab(
-      icon: SvgPicture.asset(
-        'assets/apple (1).svg',
-        width: 30,
-        height: 30,
-        color: Colors.grey,
-      ),
-      text: 'Frutas',
-    ),
-  ];
+
+class EightScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.bottomRight,
-      children: [
-        DefaultTabController(
-          length: _tabs.length,
-          child: Scaffold(
-            appBar: AppBar(
-              title: Text('Delivery'),
-              foregroundColor: Colors.black,
-              backgroundColor: Colors.white,
-              actions: [
-                IconButton(
-                  icon: Icon(Icons.search_rounded, color: Colors.green),
-                  onPressed: () => showSearch(context: context, delegate: ProductSearchDelegate()),
-                ),
-                IconButton(
-                    icon: Icon(Icons.history_rounded, color: Colors.green),
-                    onPressed: () =>
-                        Navigator.pushReplacementNamed(context, 'twelve')),
-              ],
-              leading: Builder(
-                builder: (BuildContext context) {
-                  return IconButton(
-                    icon: const Icon(Icons.arrow_back, color: Colors.green),
-                    onPressed: () =>
-                        Navigator.pushReplacementNamed(context, 'four'),
-                  );
-                },
-              ),
-            ),
-            body: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 5),
-                  child: TabBar(
-                    tabs: _tabs,
-                    isScrollable: true,
-                    physics: BouncingScrollPhysics(),
-                    unselectedLabelColor: Colors.black38,
-                    labelColor: Colors.black54,
-                    indicatorColor: Color.fromARGB(0, 0, 0, 0),
-                  ),
-                ),
-                const Expanded(
-                  child: TabBarView(
-                    physics: BouncingScrollPhysics(),
-                    dragStartBehavior: DragStartBehavior.down,
-                    children: [
-                      //TODO: añadir los productos separados por sectores
-                      _CardTable(),
-                      _CardTable(),
-                      _CardTable(),
-                      _CardTable(),
-                      _CardTable(),
-
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Ollas'),
+        foregroundColor: Colors.black,
+        backgroundColor: Colors.white,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.green),
+              onPressed: () =>
+                  Navigator.pushReplacementNamed(context, 'seven'),
+            );
+          },
         ),
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.lime[600],
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(20))
-
-          ),
-          child: FittedBox(
-            fit: BoxFit.contain,
-            child: Row(
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: ListView(
+              physics: BouncingScrollPhysics(),
+              dragStartBehavior: DragStartBehavior.down,
               children: [
-              
-                MaterialButton(
-                  minWidth: 10,
-                  child: Icon(Icons.person, color: Colors.white,),
-                  //TODO: portar a pag 16
-                  onPressed: () {}, 
-                ),
-                MaterialButton(
-                  minWidth: 10,
-                  child: Icon(Icons.add_shopping_cart_rounded, color: Colors.white,),
-                  //TODO: portar a pag 13
+                //TODO: añadir los productos separados por sectores
+                _CardTable(),
 
-                  onPressed: () {}, 
-                ),
               ],
             ),
           ),
-        )
-      ],
-      
+        ],
+      ),
     );
   }
 }
@@ -165,6 +54,7 @@ class _CardTable extends StatelessWidget {
         child: Table(
           children: const [
             TableRow(children: [
+              //TODO: CAMBIAR ELEMENTOS
               _SingleCard(
                   image:'https://www.mccain-foodservice.es/wp-content/uploads/2019/08/Inspiration_6255_Crispy_Chicken_Wings.jpg',
                   nombre: 'Alitas de pollo',
@@ -278,7 +168,7 @@ class _SingleCard extends StatelessWidget {
             ],
           ),
         ),
-        onTap: () => Navigator.pushReplacementNamed(context, 'six'),
+        onTap: () => Navigator.pushReplacementNamed(context, 'nine'),
       ),
     );
   }

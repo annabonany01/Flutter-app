@@ -45,67 +45,98 @@ class SevenScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: DefaultTabController(
-        length: _tabs.length,
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text('Productos'),
-            foregroundColor: Colors.black,
-            backgroundColor: Colors.white,
-            actions: [
-              IconButton(
-                icon: Icon(Icons.search_rounded, color: Colors.green),
-                onPressed: () => Navigator.pushReplacementNamed(context, 'ten'),
+    return Stack(
+      alignment: Alignment.bottomRight,
+      children: [
+        DefaultTabController(
+          length: _tabs.length,
+          child: Scaffold(
+            appBar: AppBar(
+              title: Text('Productos'),
+              foregroundColor: Colors.black,
+              backgroundColor: Colors.white,
+              actions: [
+                IconButton(
+                  icon: Icon(Icons.search_rounded, color: Colors.green),
+                  onPressed: () => Navigator.pushReplacementNamed(context, 'ten'),
+                ),
+                IconButton(
+                    icon: Icon(Icons.history_rounded, color: Colors.green),
+                    onPressed: () =>
+                        Navigator.pushReplacementNamed(context, 'twelve')),
+              ],
+              leading: Builder(
+                builder: (BuildContext context) {
+                  return IconButton(
+                    icon: const Icon(Icons.arrow_back, color: Colors.green),
+                    onPressed: () =>
+                        Navigator.pushReplacementNamed(context, 'four'),
+                  );
+                },
               ),
-              IconButton(
-                  icon: Icon(Icons.history_rounded, color: Colors.green),
-                  onPressed: () =>
-                      Navigator.pushReplacementNamed(context, 'twelve')),
-            ],
-            leading: Builder(
-              builder: (BuildContext context) {
-                return IconButton(
-                  icon: const Icon(Icons.arrow_back, color: Colors.green),
-                  onPressed: () =>
-                      Navigator.pushReplacementNamed(context, 'four'),
-                );
-              },
+            ),
+            body: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: TabBar(
+                    tabs: _tabs,
+                    isScrollable: true,
+                    physics: BouncingScrollPhysics(),
+                    unselectedLabelColor: Colors.black38,
+                    labelColor: Colors.black54,
+                    indicatorColor: Color.fromARGB(0, 0, 0, 0),
+                  ),
+                ),
+                const Expanded(
+                  child: TabBarView(
+                    physics: BouncingScrollPhysics(),
+                    dragStartBehavior: DragStartBehavior.down,
+                    children: [
+                      //TODO: añadir los productos separados por sectores
+                      _CardTable(),
+                      _CardTable(),
+                      _CardTable(),
+                      _CardTable(),
+
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 5),
-                child: TabBar(
-                  tabs: _tabs,
-                  isScrollable: true,
-                  physics: BouncingScrollPhysics(),
-                  unselectedLabelColor: Colors.black38,
-                  labelColor: Colors.black54,
-                  indicatorColor: Color.fromARGB(0, 0, 0, 0),
-                ),
-              ),
-              const Expanded(
-                child: TabBarView(
-                  physics: BouncingScrollPhysics(),
-                  dragStartBehavior: DragStartBehavior.down,
-                  children: [
-                    //TODO: añadir los productos separados por sectores
-                    _CardTable(),
-                    _CardTable(),
-                    _CardTable(),
-                    _CardTable(),
-                    _CardTable(),
-
-                  ],
-                ),
-              ),
-            ],
-          ),
         ),
-      ),
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.lime[600],
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(20))
+
+          ),
+          child: FittedBox(
+            fit: BoxFit.contain,
+            child: Row(
+              children: [
+              
+                MaterialButton(
+                  minWidth: 10,
+                  child: Icon(Icons.person, color: Colors.white,),
+                  //TODO: portar a pag 16
+                  onPressed: () {}, 
+                ),
+                MaterialButton(
+                  minWidth: 10,
+                  child: Icon(Icons.add_shopping_cart_rounded, color: Colors.white,),
+                  //TODO: portar a pag 13
+
+                  onPressed: () {}, 
+                ),
+              ],
+            ),
+          ),
+        )
+      ],
+      
     );
   }
 }
@@ -123,6 +154,7 @@ class _CardTable extends StatelessWidget {
         child: Table(
           children: const [
             TableRow(children: [
+              //TODO: CAMBIAR ELEMENTOS
               _SingleCard(
                   image:'https://www.mccain-foodservice.es/wp-content/uploads/2019/08/Inspiration_6255_Crispy_Chicken_Wings.jpg',
                   nombre: 'Alitas de pollo',
@@ -236,7 +268,8 @@ class _SingleCard extends StatelessWidget {
             ],
           ),
         ),
-        onTap: () => Navigator.pushReplacementNamed(context, 'six'),
+        //TODO: cambiar direccion
+        onTap: () => Navigator.pushReplacementNamed(context, 'nine'),
       ),
     );
   }
