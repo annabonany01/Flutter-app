@@ -62,7 +62,7 @@ class _LoginForm extends StatelessWidget {
                 hintText: 'Marta Gomez',
                 labelText: 'Nombre y Apellidos',
               ),
-              onChanged: ( value ) => loginForm.email = value,
+              onChanged: ( value ) => loginForm.name = value,
               
             ),
 
@@ -75,7 +75,7 @@ class _LoginForm extends StatelessWidget {
                 hintText: '645823019',
                 labelText: 'Teléfono',
               ),
-              onChanged: ( value ) => loginForm.password = value,
+              onChanged: ( value ) => loginForm.movil = value,
               validator: ( value ) {
 
                   //TODO: VALIDAR

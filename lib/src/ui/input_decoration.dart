@@ -10,7 +10,7 @@ class InputDecorations {
     return InputDecoration(
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.green
+            color: Colors.black45,
           ),
         ),
         focusedBorder: OutlineInputBorder(
@@ -20,9 +20,12 @@ class InputDecorations {
           )
         ),
         hintText: hintText,
+        hintStyle: TextStyle(
+          color: Colors.black38
+        ),
         labelText: labelText,
         labelStyle: TextStyle(
-          color: Colors.grey
+          color: Colors.black54
         ),
         
       );

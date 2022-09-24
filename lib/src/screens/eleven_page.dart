@@ -30,15 +30,15 @@ class ElevenScreen extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate([
               
-              Resume(
+              _Resume(
                 fecha: '20 de mayo de 2020',
                 coste: '120,00',
                 estado: 'En camino',
               ),
               Divider(thickness: 1),
 
-              ProductoCarrito(name: 'Thermomix', image: 'https://assets.tmecosys.com/image/upload/t_web640@2x/cdn/contentful/6OGkTjUfwgfHnMdzCoFBkj/1dff483b2ed1634706ba00d82a3bdb83/imagen3.jpg', price: '50'),
-              ProductoCarrito(name: 'Pastel de pistacho y frambuesas', image: 'http://www.pecadosdereposteria.com/wp-content/uploads/2014/08/crema-queso-rambuesas-crocanti-istachos-pecados-reposteria-3.jpg', price: '16'),
+              _ProductoCarrito(name: 'Thermomix', image: 'https://assets.tmecosys.com/image/upload/t_web640@2x/cdn/contentful/6OGkTjUfwgfHnMdzCoFBkj/1dff483b2ed1634706ba00d82a3bdb83/imagen3.jpg', price: '50'),
+              _ProductoCarrito(name: 'Pastel de pistacho y frambuesas', image: 'http://www.pecadosdereposteria.com/wp-content/uploads/2014/08/crema-queso-rambuesas-crocanti-istachos-pecados-reposteria-3.jpg', price: '16'),
               
 
             ])
@@ -49,14 +49,14 @@ class ElevenScreen extends StatelessWidget {
   }
 }
 
-class Resume extends StatelessWidget {
+class _Resume extends StatelessWidget {
 
   final String fecha;
   final String coste;
   final String estado;
 
 
-  const Resume({
+  const _Resume({
     super.key, 
     required this.fecha, 
     required this.coste, 
@@ -100,13 +100,13 @@ class Resume extends StatelessWidget {
 }
 
 
-class ProductoCarrito extends StatelessWidget {
+class _ProductoCarrito extends StatelessWidget {
     
     final String name;
     final String image;
     final String price;
 
-  const ProductoCarrito({
+  const _ProductoCarrito({
     super.key,
     required this.name, 
     required this.image, 
@@ -114,7 +114,7 @@ class ProductoCarrito extends StatelessWidget {
   });
   // final Product product;
 
-  // const ProductoCarrito(this.product); 
+  // const _ProductoCarrito(this.product); 
   @override
   Widget build(BuildContext context) {
 

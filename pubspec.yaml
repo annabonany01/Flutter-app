@@ -30,6 +30,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   card_swiper: ^2.0.4
+  credit_card_validator: ^2.0.1
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter

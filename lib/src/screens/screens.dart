@@ -1,8 +1,3 @@
-
-
-
-
-
 export 'package:abalit/src/screens/first_screen.dart';
 export 'package:abalit/src/screens/second_screen.dart';
 export 'package:abalit/src/screens/third_screen.dart';
@@ -15,3 +10,11 @@ export 'package:abalit/src/screens/nine_screen.dart';
 export 'package:abalit/src/screens/ten_screen.dart';
 export 'package:abalit/src/screens/eleven_page.dart';
 export 'package:abalit/src/screens/twelve_screen.dart';
+export 'package:abalit/src/screens/thirteen_screen.dart';
+export 'package:abalit/src/screens/fourteen_screen.dart';
+export 'package:abalit/src/screens/fiveteen_screen.dart';
+export 'package:abalit/src/screens/sixteen_screen.dart';
+export 'package:abalit/src/screens/seventeen_screen.dart';
+export 'package:abalit/src/screens/eighteen_screen.dart';
+export 'package:abalit/src/screens/nineteen_screen.dart';
+export 'package:abalit/src/screens/twenty_screen.dart';

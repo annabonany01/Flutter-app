@@ -10,7 +10,7 @@ class Product {
     final String id;
     final String image;
     final String description;
-    final String price;
+    final int price;
     final int type;
 
     Product({

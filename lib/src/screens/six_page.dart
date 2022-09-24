@@ -117,8 +117,8 @@ class _Button extends StatelessWidget {
         onPressed: () async {
           //TODO: poner carga
           await Future.delayed(Duration(seconds: 1 ));
-          //TODO: cambiar pag
-          Navigator.pushNamed(context, 'second');
+          
+          Navigator.pushReplacementNamed(context, 'thirteen'); 
         },
       ),
     );
