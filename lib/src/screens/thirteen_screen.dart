@@ -21,6 +21,7 @@ class ThirteenScreen extends StatelessWidget {
         ),
       ),
       body: CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
           SliverList(
             delegate: SliverChildListDelegate([

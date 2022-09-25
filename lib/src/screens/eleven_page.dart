@@ -26,6 +26,7 @@ class ElevenScreen extends StatelessWidget {
         ),
       ),
       body: CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
           SliverList(
             delegate: SliverChildListDelegate([

@@ -132,8 +132,7 @@ class FiveScreen extends StatelessWidget {
                 MaterialButton(
                   minWidth: 10,
                   child: Icon(Icons.person, color: Colors.white,),
-                  //TODO: portar a pag 16
-                  onPressed: () {}, 
+                  onPressed: () => Navigator.pushReplacementNamed(context, 'sixteen')
                 ),
                 MaterialButton(
                   minWidth: 10,

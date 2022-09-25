@@ -1,4 +1,3 @@
-//import 'package:abalit/src/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 
@@ -18,9 +17,9 @@ class SixScreen extends StatelessWidget {
 
     return Scaffold(
       body: CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
           //TODO: hacer card swiper
-          //CardSwiper(images: images,),
           BackImage(),
           SliverList(
             delegate: SliverChildListDelegate([

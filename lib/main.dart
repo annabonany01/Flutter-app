@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'App Abalit',
-      initialRoute: 'sixteen',
+      initialRoute: 'first',
       routes: {
         'first': (_) => FirstScreen(),
         'second': (_) => SecondScreen(),

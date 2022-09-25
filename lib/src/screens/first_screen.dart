@@ -10,32 +10,38 @@ class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Logo(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 280),
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Logo(),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox( height: 30 ),
+          
+                  Text('¡Hola de nuevo!', style: Theme.of(context).textTheme.titleLarge),
+          
+                  const SizedBox( height: 30 ),
+                      
+                  ChangeNotifierProvider(
+                    create: ( _ ) => LoginFormProvider(),
+                    child: _LoginForm()
+                  ),
 
-                Text('¡Hola de nuevo!', style: Theme.of(context).textTheme.titleLarge),
-
-                const SizedBox( height: 30 ),
-                    
-                ChangeNotifierProvider(
-                  create: ( _ ) => LoginFormProvider(),
-                  child: _LoginForm()
-                ),
-
-
-              ],
-            ),
-          ),
-        ),
+                  const SizedBox( height: 30 ),
         
-      ),
-      );
+                ],
+              ),
+                
+            ]
+          ),
+        )
+      )
+    );
   }
 }
 
@@ -158,7 +164,7 @@ class _Button extends StatelessWidget {
         child: Text(
           loginForm.isLoading 
             ? 'Logging in'
-            : 'Log in',
+            : 'LOG IN',
           style: TextStyle( color: Colors.white ),
         )
       ),

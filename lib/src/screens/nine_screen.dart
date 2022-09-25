@@ -9,6 +9,7 @@ class NineScreen extends StatelessWidget {
 
     return Scaffold(
       body: CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
           //TODO: hacer card swiper
           //CardSwiper(images: images,),

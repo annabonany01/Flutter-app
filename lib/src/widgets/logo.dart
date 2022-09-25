@@ -2,25 +2,14 @@ import 'package:flutter/material.dart';
 
 class Logo extends StatelessWidget {
 
-  final Widget child;
-
-  const Logo({
-    super.key, 
-    required this.child
-  });
 
   @override
   Widget build(BuildContext context) {
 
     return Container(
-      width: double.infinity,
-      height: double.infinity,
       child: Stack(
         children: [
           _logo(),
-
-          this.child
-
         ],
       )
     );
@@ -37,7 +26,7 @@ class _logo extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      height: size.height * 0.4,
+      height: size.height * 0.3,
       child: Stack(
         children: [
           Positioned(
@@ -48,7 +37,7 @@ class _logo extends StatelessWidget {
                 border: Border.all(color: Colors.green)
               ),
             ),
-            top: 100,
+            top: 60,
             left: 100,
           ),
           Positioned(
@@ -56,7 +45,7 @@ class _logo extends StatelessWidget {
               'L',
               style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 90),
             ),
-            top: 120,
+            top: 80,
             left: 150,
           )
         ],

@@ -10,32 +10,37 @@ class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Logo(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 280),
-
-                Text('¡Te damos la bienvenida!', style: Theme.of(context).textTheme.titleLarge),
-
-                const SizedBox( height: 30 ),
-                    
-                ChangeNotifierProvider(
-                  create: ( _ ) => LoginFormProvider(),
-                  child: _LoginForm()
-                ),
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Logo(),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox( height: 30 ),
 
 
-              ],
-            ),
+                  Text('¡Te damos la bienvenida!', style: Theme.of(context).textTheme.titleLarge),
+
+                  const SizedBox( height: 30 ),
+                      
+                  ChangeNotifierProvider(
+                    create: ( _ ) => LoginFormProvider(),
+                    child: _LoginForm()
+                  ),
+                  const SizedBox( height: 30 ),
+
+                ],
+              ),
+            ]
           ),
         ),
-        
-      ),
-      );
+      )
+    );
   }
 }
 
@@ -63,6 +68,11 @@ class _LoginForm extends StatelessWidget {
                 labelText: 'Nombre y Apellidos',
               ),
               onChanged: ( value ) => loginForm.name = value,
+
+              validator: ( value ) {
+                //TODO: VALIDAR                                  
+                  
+              },
               
             ),
 
@@ -78,7 +88,10 @@ class _LoginForm extends StatelessWidget {
               onChanged: ( value ) => loginForm.movil = value,
               validator: ( value ) {
 
-                  //TODO: VALIDAR
+                  return ( value != null && value.length == 9 ) 
+                    ? null
+                    : 'Wrong input';                                    
+                  
               },
             ),
 
@@ -164,7 +177,7 @@ class _Button extends StatelessWidget {
         child: Text(
           loginForm.isLoading 
             ? 'Signing in'
-            : 'Sig in',
+            : 'SIGN IN',
           style: TextStyle( color: Colors.white ),
         )
       ),
