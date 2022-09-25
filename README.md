@@ -1,16 +1,56 @@
-# abalit
+<h3 align="center">PROVA ABALIT ANNA BONANY</h3>
 
-A new Flutter project.
+</div>
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+This mobile application developed in Flutter simulates an online ordering application, where two types of products can be ordered: ready meals or kitchen equipment. 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+### Built With
+
+* [Dart](https://dart.dev/)
+* [Flutter](https://flutter.dev)
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+The dependencies used:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+cupertino_icons: ^1.0.2 
+```
+```
+provider: ^6.0.3
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="right">(<a href="#top">back to top</a>)</p>
