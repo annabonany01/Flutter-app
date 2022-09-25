@@ -111,10 +111,9 @@ class _Button extends StatelessWidget {
           child: Text('Añadir al carrito',style: TextStyle( color: Colors.white ))
         ),
         onPressed: () async {
-          //TODO: poner carga
           await Future.delayed(Duration(seconds: 1 ));
-          //TODO: cambiar pag
-          Navigator.pushNamed(context, 'second');
+          
+          Navigator.pushNamed(context, 'thirteen');
         },
       ),
     );

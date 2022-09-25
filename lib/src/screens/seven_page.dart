@@ -125,15 +125,12 @@ class SevenScreen extends StatelessWidget {
                 MaterialButton(
                   minWidth: 10,
                   child: Icon(Icons.person, color: Colors.white,),
-                  //TODO: portar a pag 16
-                  onPressed: () {}, 
+                  onPressed: () => Navigator.pushReplacementNamed(context, 'sixteen'), 
                 ),
                 MaterialButton(
                   minWidth: 10,
                   child: Icon(Icons.add_shopping_cart_rounded, color: Colors.white,),
-                  //TODO: portar a pag 13
-
-                  onPressed: () {}, 
+                  onPressed: () => Navigator.pushReplacementNamed(context, 'thirteen'), 
                 ),
               ],
             ),
