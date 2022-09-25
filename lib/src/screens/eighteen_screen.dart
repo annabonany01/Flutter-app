@@ -6,6 +6,10 @@ import 'package:provider/provider.dart';
 
 class EighteenScreen extends StatelessWidget {
 
+  /*  EIGHTEEN SCREEN
+      En esta pagina se encuentran los campos para poder modificar datos del perfil
+  */
+
   @override
   Widget build(BuildContext context) {
 

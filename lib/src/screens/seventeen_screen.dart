@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 
 class SeventeenScreen extends StatelessWidget {
 
+  /*  SEVENTEEN SCREEN
+      En esta pagina se encuentran los ajustes del perfil
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

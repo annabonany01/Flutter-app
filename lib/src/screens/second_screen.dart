@@ -7,6 +7,10 @@ import 'package:provider/provider.dart';
 
 class SecondScreen extends StatelessWidget {
 
+  /*  SECOND SCREEN
+      En esta pagina se encuentra el registro de usuario
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

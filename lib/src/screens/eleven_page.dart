@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 
 class ElevenScreen extends StatelessWidget {
 
+  /*  ELEVEN SCREEN
+      En esta pagina se encuentra la descripción de un pedido
+  */
+
   @override
   Widget build(BuildContext context) {
     

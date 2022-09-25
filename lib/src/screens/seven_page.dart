@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SevenScreen extends StatelessWidget {
+
+  /*  SEVEN SCREEN
+      En esta pagina se encuentran los productos de cocina
+  */
  
   final List<Tab> _tabs = [
     Tab(

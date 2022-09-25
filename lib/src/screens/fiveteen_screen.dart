@@ -7,6 +7,10 @@ import 'package:provider/provider.dart';
 
 class FiveteenScreen extends StatelessWidget {
 
+  /*  FIVETEEN SCREEN
+      En esta pagina se encuentra el metodo para agregar una tarjeta de pago nueva
+  */
+
   
   @override
   Widget build(BuildContext context) {

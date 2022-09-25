@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 
 class SixteenScreen extends StatelessWidget {
 
+  /*  SIXTEEN SCREEN
+      En esta pagina se encuentra el perfil del usuario
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

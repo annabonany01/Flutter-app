@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 int cantidad = 1;
 class ThirteenScreen extends StatelessWidget {
 
+  /*  THIRTEEN SCREEN
+      En esta pagina se encuentra el carrito de compra con todos los articulos agregados
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

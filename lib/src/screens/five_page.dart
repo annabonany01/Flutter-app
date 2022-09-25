@@ -1,9 +1,13 @@
-import 'package:abalit/src/search/search_delegate.dart';
+import 'package:abalit/src/screens/screens.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class FiveScreen extends StatelessWidget {
+
+  /*  FIVE SCREEN
+      En esta pagina se encuentran los productos relacionados con el Delivery
+  */
  
   final List<Tab> _tabs = [
     Tab(
@@ -68,7 +72,7 @@ class FiveScreen extends StatelessWidget {
               actions: [
                 IconButton(
                   icon: Icon(Icons.search_rounded, color: Colors.green),
-                  onPressed: () => showSearch(context: context, delegate: ProductSearchDelegate()),
+                  onPressed: () => showSearch(context: context, delegate: TenScreen()),
                 ),
                 IconButton(
                     icon: Icon(Icons.history_rounded, color: Colors.green),

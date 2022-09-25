@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 
 class EightScreen extends StatelessWidget {
 
+  /*  EIGHT SCREEN
+      En esta pagina se encuentra los productos de cocina clasificados por tipos
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

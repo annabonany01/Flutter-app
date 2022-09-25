@@ -6,6 +6,10 @@ import 'package:provider/provider.dart';
 
 class NineteenScreen extends StatelessWidget {
 
+  /*  NINETEEN SCREEN
+      En esta pagina se encuentra el campo para poder cambiar de contraseña
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

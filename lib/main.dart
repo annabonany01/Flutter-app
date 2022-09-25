@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         'seven': (_) => SevenScreen(),
         'eight': (_) => EightScreen(),
         'nine': (_) => NineScreen(),
-        'ten': (_) => TenScreen(),
+        //'ten': (_) => TenScreen(),
         'eleven': (_) => ElevenScreen(),
         'twelve': (_) => TwelveScreen(),
         'thirteen': (_) => ThirteenScreen(),

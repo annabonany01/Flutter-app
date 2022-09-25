@@ -7,6 +7,10 @@ import 'package:provider/provider.dart';
 
 class ThirdScreen extends StatelessWidget {
 
+  /*  THIRD SCREEN
+      En esta pagina se encuentra el campo para poder recuperar la contraseña olvidada.
+  */
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

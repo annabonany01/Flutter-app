@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 
 class SixScreen extends StatelessWidget {
 
+  /*  SIX SCREEN
+      En esta pagina se encuentra la descripción del producto delivery y poder añadirlo al carrito
+  */
+
   final List<Image> images = [
     Image.network('http://www.pecadosdereposteria.com/wp-content/uploads/2014/08/crema-queso-rambuesas-crocanti-istachos-pecados-reposteria-3.jpg'),
     Image.network('https://img2.rtve.es/imagenes/torres-cocina-tarta-frambuesas-pistachos/1551022521850.png'),

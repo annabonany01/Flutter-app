@@ -7,6 +7,10 @@ import 'package:provider/provider.dart';
 
 class FirstScreen extends StatelessWidget {
 
+  /*  FIRST SCREEN
+      En esta pagina se encuentra el inicio de sesion de la app
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

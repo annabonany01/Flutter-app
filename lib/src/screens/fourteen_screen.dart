@@ -6,6 +6,10 @@ import 'package:provider/provider.dart';
 
 class FourteenScreen extends StatelessWidget {
 
+  /*  FOURTEEN SCREEN
+      En esta pagina se encuentra la forma de pago para comprar el pedido
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

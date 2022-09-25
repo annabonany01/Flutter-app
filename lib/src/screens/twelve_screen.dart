@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 
 class TwelveScreen extends StatelessWidget {
 
+  /*  TWELVE SCREEN
+      En esta pagina se encuentra el historial de pedidos realizados
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

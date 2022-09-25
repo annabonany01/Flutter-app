@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
 
 class FourScreen extends StatelessWidget {
 
+  /*  FOUR SCREEN
+      En esta pagina se encuentra el main menu 
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

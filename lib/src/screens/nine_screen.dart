@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 
 class NineScreen extends StatelessWidget {
 
+  /*  NINE SCREEN
+      En esta pagina se encuentra la descripción de un producto de cocina
+  */
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;

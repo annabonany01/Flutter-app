@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 
 class TwentyScreen extends StatelessWidget {
 
+  /*  TWENTY SCREEN
+      En esta pagina se encuentra la información correspondiente de la aplicación
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
